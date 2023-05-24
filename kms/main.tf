@@ -27,14 +27,14 @@ resource "aws_db_subnet_group" "public" {
 #KMS Key
 data "aws_kms_secrets" "creds" {
   secret {
-    name    = "db"
-    payload = file("${path.module}/db-creds.yml.encrypted")
+    name    = "rds"
+    payload = file("${path.module}/db-creds.yaml-encrypted")
   }
 }
 
 #Local Variables
 locals {
-  db_creds = yamldecode(data.aws_kms_secrets.creds.plaintext["db"])
+  db_creds = yamldecode(data.aws_kms_secrets.creds.plaintext["rds"])
 }
 
 #DB Instance
