@@ -20,3 +20,12 @@ aws kms decrypt --region us-east-1 \
 --ciphertext-blob fileb://db-creds.yaml-encrypted \
 --output text --query Plaintext | base64 --decode  > db-creds.yaml
 ```
+
+- Terraform KMS Encryption
+```bash
+aws kms encrypt --region us-east-1 \
+--key-id aa991812-cf4b-405c-bd4d-435df22c7512 \
+--plaintext fileb://db-creds.yaml-hold \
+--output text \
+--query CiphertextBlob > db-creds.yaml-encrypted
+```
