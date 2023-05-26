@@ -11,7 +11,7 @@ aws kms encrypt --region us-east-1 \
 --plaintext fileb://db-creds.yaml-hold \
 --output text \
 --query CiphertextBlob | base64 \
- > db-creds.yaml-encrypted
+--decode > db-creds.yaml-encrypted
 ```
 
 - KMS Decryption Command Line, decrypt file
