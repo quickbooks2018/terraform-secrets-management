@@ -1,3 +1,3 @@
 # Terraform Secrets Encryption
 
-- https://cloudgeeks.ca
+- https://www.youtube.com/@cloudgeeksca
