@@ -1,3 +1,3 @@
 # Terraform Secrets Encryption
 
-- https://www.youtube.com/@cloudgeeksca
+- https://www.youtube.com/@DevOpsGang/videos
